@@ -1,166 +1,295 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title> Artic </title>
-    <link rel="stylesheet" href="index.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-  <div class="sidebar close">
-    <!--Logo-->
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">Artic</span>
-    </div>
-    
-    <!--Logo-->
-    <ul class="nav-links">
-    
-        <li>
-        <!--Home-->
-        <a href="#">
-          <i class='bx bx-grid-alt' ></i>
-          <span class="link_name">Home</span>
-        </a>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
 
-        <!--Sub Menu Home (make sure sama)-->
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Home</a></li>
-        </ul>
-      </li>
-      
-      <!--Featured Section nav-->
-      <li>
-        <div class="icon-link">
-          <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name">Featured</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        appearance: none;
+        background: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-page">
+      <img class="shapes" src="shapes.png" />
+      <div class="front">
+        <div class="pannel">
+          <div class="pannel-3">
+            <svg
+              class="rectangle-16"
+              width="648"
+              height="372"
+              viewBox="0 0 648 372"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_i_9_218)">
+                <path
+                  d="M0 30.3552C0 13.7867 13.4315 0.355225 30 0.355225H618C634.568 0.355225 648 13.7867 648 30.3552V342C648 358.569 634.568 372 618 372H30C13.4315 372 0 358.569 0 342V30.3552Z"
+                  fill="#E8E5F7"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_i_9_218"
+                  x="0"
+                  y="0.355225"
+                  width="648"
+                  height="375.645"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite
+                    in2="hardAlpha"
+                    operator="arithmetic"
+                    k2="-1"
+                    k3="1"
+                  />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="shape"
+                    result="effect1_innerShadow_9_218"
+                  />
+                </filter>
+              </defs>
+            </svg>
+
+            <img class="_2-04-01" src="_2-04-01.png" />
+            <div class="faq-support">faq &amp; support</div>
+          </div>
+          <div class="pannel-2">
+            <svg
+              class="rectangle-15"
+              width="319"
+              height="372"
+              viewBox="0 0 319 372"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_i_9_216)">
+                <path
+                  d="M0.734497 20C0.734497 8.95433 9.6888 0 20.7345 0H299C310.046 0 319 8.9543 319 20V351.645C319 362.69 310.046 371.645 299 371.645H20.7345C9.68879 371.645 0.734497 362.69 0.734497 351.645V20Z"
+                  fill="#DEA27D"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_i_9_216"
+                  x="0.734497"
+                  y="0"
+                  width="318.266"
+                  height="375.645"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite
+                    in2="hardAlpha"
+                    operator="arithmetic"
+                    k2="-1"
+                    k3="1"
+                  />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="shape"
+                    result="effect1_innerShadow_9_216"
+                  />
+                </filter>
+              </defs>
+            </svg>
+
+            <div class="subtitle">find a place</div>
+            <img class="_2-04-012" src="_2-04-012.png" />
+          </div>
+          <div class="pannel-1">
+            <svg
+              class="rectangle-152"
+              width="319"
+              height="372"
+              viewBox="0 0 319 372"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_i_14_154)">
+                <path
+                  d="M0 20C0 8.95433 8.9543 0 20 0H298.266C309.311 0 318.265 8.9543 318.265 20V351.645C318.265 362.69 309.311 371.645 298.265 371.645H20C8.95429 371.645 0 362.69 0 351.645V20Z"
+                  fill="#73B1DE"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_i_14_154"
+                  x="0"
+                  y="0"
+                  width="318.266"
+                  height="375.645"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite
+                    in2="hardAlpha"
+                    operator="arithmetic"
+                    k2="-1"
+                    k3="1"
+                  />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="shape"
+                    result="effect1_innerShadow_14_154"
+                  />
+                </filter>
+              </defs>
+            </svg>
+
+            <img class="_2-08-01" src="_2-08-01.png" />
+            <div class="check-my-score">Check My score</div>
+          </div>
         </div>
-        
-        <!--Sub Menu Feature (make sure sama)-->
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#"> Featured</a></li>
-          <li><a href="#">Honkai: Star Rail</a></li>
-          <li><a href="#">CS:GO</a></li>
-          <li><a href="#">Destiny 2</a></li>
-        </ul>
-      </li>
-      
-      <!--Featured Section nav-->
-      <li>
-        <div class="icon-link">
-          <a href="#">
-            <i class='bx bx-book-alt' ></i>
-            <span class="link_name">Voucher</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+        <div class="head">
+          <div class="find-your-perfect-roommate">
+            <span
+              ><span class="find-your-perfect-roommate-span">Find Your </span
+              ><span class="find-your-perfect-roommate-span2">Perfect</span
+              ><span class="find-your-perfect-roommate-span3"> </span
+              ><span class="find-your-perfect-roommate-span4"
+                >Roommate</span
+              ></span
+            >
+          </div>
         </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Top-up</a></li>
-          <li><a href="#">Steam</a></li>
-          <li><a href="#">Battle.net</a></li>
-          <li><a href="#">Card Design</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-pie-chart-alt-2' ></i>
-          <span class="link_name">Analytics</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Analytics</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-line-chart' ></i>
-          <span class="link_name">Chart</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Chart</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="icon-link">
-          <a href="#">
-            <i class='bx bx-plug' ></i>
-            <span class="link_name">Plugins</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Plugins</a></li>
-          <li><a href="#">UI Face</a></li>
-          <li><a href="#">Pigments</a></li>
-          <li><a href="#">Box Icons</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-compass' ></i>
-          <span class="link_name">Explore</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Explore</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-history'></i>
-          <span class="link_name">History</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">History</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-cog' ></i>
-          <span class="link_name">Setting</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Setting</a></li>
-        </ul>
-      </li>
-      <li>
-    <div class="profile-details">
-      <div class="profile-content">
-        <img src="image/profile.jpg" alt="profileImg">
       </div>
-      <div class="name-job">
-        <div class="profile_name">Admin</div>
-        <div class="job">Admin Admin</div>
+      <div class="header">
+        <div class="rigth-menu">
+          <div class="find">
+            <svg
+              class="rectangle-17"
+              width="301"
+              height="40"
+              viewBox="0 0 301 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.723633 20C0.723633 9.23045 9.45408 0.5 20.2236 0.5H280.224C290.993 0.5 299.724 9.23045 299.724 20C299.724 30.7696 290.993 39.5 280.224 39.5H20.2236C9.45408 39.5 0.723633 30.7696 0.723633 20Z"
+                stroke="white"
+              />
+            </svg>
+
+            <svg
+              class="search"
+              width="23"
+              height="20"
+              viewBox="0 0 23 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.1105 15C6.21649 15 3.04846 12.1962 3.04846 8.75C3.04846 5.30375 6.21649 2.5 10.1105 2.5C14.0045 2.5 17.1725 5.30375 17.1725 8.75C17.1725 12.1962 14.0045 15 10.1105 15ZM22.4083 17.8662L18.0129 14.0013C18.0101 13.9988 18.0073 13.9987 18.0044 13.9963C19.2502 12.5312 19.9973 10.7188 19.9973 8.75C19.9973 3.92625 15.561 0 10.1105 0C4.65859 0 0.223633 3.92625 0.223633 8.75C0.223633 13.5738 4.65859 17.5 10.1105 17.5C12.335 17.5 14.383 16.8388 16.0369 15.7375C16.0398 15.74 16.0398 15.7425 16.0426 15.745L20.4112 19.6338C20.6866 19.8775 21.0482 20 21.4097 20C21.7713 20 22.1329 19.8775 22.4083 19.6338C22.9606 19.145 22.9606 18.355 22.4083 17.8662Z"
+                fill="white"
+              />
+            </svg>
+
+            <div class="find-your-tenant">Find Your Tenant</div>
+          </div>
+          <div class="rent">Login</div>
+          <div class="sign-in">Sign Up</div>
+        </div>
+        <div class="frame-3">
+          <svg
+            class="logo"
+            width="51"
+            height="49"
+            viewBox="0 0 51 49"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M45.3702 21.0096C45.7251 21.3117 45.8476 21.8011 45.6757 22.2347L44.2547 25.8102C44.1225 26.1429 43.8316 26.3961 43.4807 26.4834L31.0329 29.5796L32.4772 30.8038L39.1963 36.5023C39.5507 36.8042 39.6739 37.2946 39.5016 37.7263L38.0795 41.3045C37.948 41.6366 37.6571 41.8898 37.3062 41.9771L25.5729 44.8956C25.2209 44.9832 24.8495 44.8972 24.576 44.6659L4.62953 27.7973C4.45013 27.6461 4.33065 27.4482 4.27714 27.2331C4.22305 27.0157 4.23712 26.7829 4.32598 26.565L5.78525 22.9704C5.91991 22.6387 6.20592 22.3935 6.55719 22.3061L19.0211 19.2059L17.5671 17.9807L10.8685 12.3369C10.5115 12.0365 10.387 11.543 10.5598 11.1096L11.9801 7.53802C12.1123 7.20491 12.4029 6.95263 12.7542 6.86526L24.4859 3.94713C24.8372 3.85976 25.2104 3.9444 25.4831 4.17639L45.3702 21.0096Z"
+              fill="#FCE76C"
+            />
+          </svg>
+
+          <div class="co-z">CO-Z</div>
+        </div>
       </div>
-      <i class='bx bx-log-out' ></i>
     </div>
-  </li>
-</ul>
-  </div>
-  <section class="home-section">
-    <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Artic</span>
-    </div>
-  </section>
-  <script>
-  let arrow = document.querySelectorAll(".arrow");
-  for (var i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e)=>{
-   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-   arrowParent.classList.toggle("showMenu");
-    });
-  }
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".bx-menu");
-  console.log(sidebarBtn);
-  sidebarBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("close");
-  });
-  </script>
-</body>
+  </body>
 </html>
