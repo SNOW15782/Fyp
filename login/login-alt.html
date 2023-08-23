@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset styles */
+    body, h1, h2, h3, h4, h5, p, a, button, input, select, textarea {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Additional custom styles */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+    
+    .login-container {
+      display: flex;
+      width: 800px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .image-section {
+      flex: 1;
+      background-image: url("rectangle-11.png");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .form-section {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .logo {
+      width: 51px;
+      height: 49px;
+      fill: #FCE76C;
+    }
+    
+    .co-z {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+    }
+    
+    .quote {
+      font-style: italic;
+      color: #777;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .author {
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+      text-align: center;
+    }
+    
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .action-buttons {
+      width: 100%;
+      margin-top: 30px;
+    }
+    
+    .button {
+      background-color: #FCE76C;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+    
+    .button.google {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      color: #333;
+    }
+    
+    .google-icon {
+      width: 24px;
+      height: 25px;
+      margin-right: 10px;
+    }
+  </style>
+  <title>Login</title>
+</head>
+<body>
+  <div class="login-container">
+    <div class="image-section"></div>
+    <div class="form-section">
+      <svg class="logo" viewBox="0 0 51 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M45.3701 21.0096C45.725 21.3117 45.8476 21.8011 45.6757 22.2347L44.2547 25.8102C44.1224 26.1429 43.8315 26.3961 43.4807 26.4834L31.0328 29.5796L32.4772 30.8038L39.1962 36.5023C39.5506 36.8042 39.6739 37.2946 39.5015 37.7263L38.0795 41.3045C37.9479 41.6366 37.657 41.8898 37.3062 41.9771L25.5729 44.8956C25.2208 44.9832 24.8494 44.8972 24.576 44.6659L4.62947 27.7973C4.45007 27.6461 4.33059 27.4482 4.27708 27.2331C4.22299 27.0157 4.23706 26.7829 4.32592 26.565L5.78518 22.9704C5.91985 22.6387 6.20586 22.3935 6.55713 22.3061L19.021 19.2059L17.5671 17.9807L10.8684 12.3369C10.5114 12.0365 10.387 11.543 10.5598 11.1096L11.98 7.53802C12.1122 7.20491 12.4029 6.95263 12.7541 6.86526L24.4858 3.94713C24.8371 3.85976 25.2103 3.9444 25.483 4.17639L45.3701 21.0096Z" fill="#FCE76C"/>
+      </svg>
+      <div class="co-z">CO-Z</div>
+      <div class="quote">
+        "CO-Z is the best place to find a place to stay and meet new people. We've been super impressed by the quality of customer feedback."
+      </div>
+      <div class="author">Madhushan Sasanka, CEO, CO-Z.com</div>
+      <input type="text" class="input-field" placeholder="Name">
+      <input type="email" class="input-field" placeholder="Email">
+      <input type="password" class="input-field" placeholder="Password">
+      <div class="action-buttons">
+        <button class="button">Create Account</button>
+        <button class="button google">
+          <img src="google-icon.png" alt="Google" class="google-icon">
+          Sign up with Google
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
