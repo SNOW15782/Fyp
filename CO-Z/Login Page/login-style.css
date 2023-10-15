@@ -1,0 +1,116 @@
+.login-1080-p,
+.login-1080-p * {
+  box-sizing: border-box;
+}
+.login-1080-p {
+  background: #ffffff;
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+.logo {
+  position: absolute;
+  left: 885px;
+  top: 196px;
+  overflow: visible;
+}
+.login-text {
+  color: var(--primary-30, #262952);
+  text-align: left;
+  font: 300 50px "Montserrat", sans-serif;
+  position: absolute;
+  left: 889px;
+  top: 352px;
+}
+.password-input {
+  width: 680px;
+  height: 120px;
+  position: absolute;
+  left: 620px;
+  top: 540px;
+}
+.input {
+  position: absolute;
+  right: 32px;
+  left: 32px;
+  bottom: 24px;
+  top: 48px;
+}
+.rectangle {
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--secondary-base, #262626);
+  border-width: 1px;
+  opacity: 0.15000000596046448;
+  width: 616px;
+  height: 48px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.password {
+  color: var(--secondary-base, #262626);
+  text-align: left;
+  font: var(--h-3, 700 18px "Cabin", sans-serif);
+  position: absolute;
+  right: 32px;
+  left: 32px;
+  top: 20px;
+}
+.forgot-password {
+    color: var(--secondary-base, #262626);
+    text-align: center; /* Change this to center the text */
+    font: 400 16px/170.1% "Cabin", sans-serif;
+    opacity: 0.4000000059604645;
+    position: absolute;
+    width: 100%; /* Make the width 100% to center the text horizontally */
+    top: 794px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text both vertically and horizontally */
+}
+.sign-up-btn {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-22 {
+  background: var(--action-10, #9d8df1);
+  border-radius: 15px;
+  opacity: 0.5;
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  left: 980px;
+  top: 699px;
+}
+.sign-up {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - -83px);
+  top: 717.41px;
+}
+.login-btn {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-222 {
+  background: var(--action-10, #9d8df1);
+  border-radius: 15px;
+  opacity: 0.5;
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  left: 740px;
+  top: 699px;
+}
+.login {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - 146px);
+  top: 717.41px;
+}
