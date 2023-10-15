@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .custom-purple-button {
+      background-color: #9D8DF1;
+      border-color: #9D8DF1;
+    }
+
+    .custom-purple-button:hover {
+      background-color: #7e6fd1;
+      border-color: #7e6fd1;
+    }
+
+    .password-link {
+      color: #262626;
+      text-decoration: none;
+    }
+
+    .password-link:hover {
+      color: #7e6fd1;
+      text-decoration: none;
+    }
+  </style>
+  <title>Login Form</title>
+</head>
+<body class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card border-0">
+          <div class="card-body">
+            <div class="text-center mb-4">
+              <svg class="logo" width="150" height="147" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M136.084 63.0164C137.148 63.9226 137.516 65.3905 137 66.6911L132.738 77.4154C132.341 78.4134 131.469 79.1727 130.417 79.4345L93.0803 88.7214L97.4125 92.3932L117.566 109.485C118.629 110.391 118.998 111.862 118.481 113.157L114.216 123.889C113.822 124.885 112.949 125.645 111.897 125.906L76.7037 134.66C75.6477 134.923 74.5338 134.665 73.7137 133.971L13.8859 83.3755C13.3478 82.922 12.9895 82.3285 12.829 81.6833C12.6667 81.0311 12.7089 80.333 12.9754 79.6792L17.3524 68.8976C17.7563 67.9029 18.6142 67.1672 19.6678 66.9051L57.0521 57.6062L52.6911 53.9315L32.5991 37.0033C31.5283 36.1023 31.155 34.6221 31.6733 33.3221L35.9333 22.6096C36.3297 21.6105 37.2015 20.8538 38.2551 20.5917L73.4433 11.8391C74.4969 11.577 75.6162 11.8309 76.4343 12.5267L136.084 63.0164Z" fill="#262952"></path>
+              </svg>
+            </div>
+            <h1 class="text-center login-text">Login</h1>
+            <div class="form-group">
+              <input type="text" id="username" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group password-input">
+              <input type="password" id="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+              <button class="btn btn-primary custom-purple-button mr-3">Sign Up</button>
+              <button class="btn btn-primary custom-purple-button login-btn" onclick="login()">Login</button>
+            </div>
+            <div class="text-center">
+              <a href="#" class="password-link">Forgot Password</a>
+            </div>
+            <div id="error-message" class="text-danger text-center" style="display: none;">Invalid username or password.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function login() {
+      // Get the username and password input values
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Check if the username and password are valid
+      if (username === 'admin' && password === '123abc') {
+        // Redirect to a successful login page
+        window.location.href = 'success.html';
+      } else {
+        // Show the error message
+        document.getElementById('error-message').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
