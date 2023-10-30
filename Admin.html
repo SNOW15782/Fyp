@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Admin Dashboard</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Admin Dashboard</h1>
+        <button id="showFormBtn" class="btn btn-primary">Show Form</button>
+        <form id="rental-form" style="display: none;">
+            <div class="form-group">
+                <label for="rentalName">Rental Name</label>
+                <input type="text" class="form-control" id="rentalName" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <select class="form-control" id="type" required>
+                    <option value="Apartment">Apartment</option>
+                    <option value="House">House</option>
+                    <option value="Condo">Condo</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Rental</button>
+        </form>
+
+        <div class="mt-4">
+            <h2>Rentals</h2>
+            <input type="text" id="search" class="form-control" placeholder="Search Rentals">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Rental Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="rental-list">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap and jQuery JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<script>
+    const rentalForm = document.getElementById('rental-form');
+    const showFormBtn = document.getElementById('showFormBtn');
+
+    // Sample data for demonstration purposes (you would replace this with actual data)
+    let rentals = [];
+
+    // Function to display rentals in the table
+    function displayRentals(filteredRentals) {
+        const rentalList = document.getElementById('rental-list');
+        rentalList.innerHTML = '';
+
+        const rentalsToDisplay = filteredRentals || rentals;
+
+        rentalsToDisplay.forEach((rental, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${rental.rentalName}</td>
+                <td>${rental.type}</td>
+                <td>${rental.price}</td>
+                <td>${rental.description}</td>
+                <td>
+                    <button class="btn btn-warning" onclick="editRental(${index})">Edit</button>
+                    <button class="btn btn-danger" onclick="deleteRental(${index})">Delete</button>
+                </td>
+            `;
+            rentalList.appendChild(row);
+        });
+    }
+
+    // Function to add a new rental
+    rentalForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const rentalName = document.getElementById('rentalName').value;
+        const type = document.getElementById('type').value;
+        const price = document.getElementById('price').value;
+        const description = document.getElementById('description').value;
+
+        if (rentalName && type && price && description) {
+            rentals.push({ rentalName, type, price, description });
+            displayRentals();
+            this.reset();
+            toggleFormVisibility();
+        }
+    });
+
+    // Function to edit a rental
+    function editRental(index) {
+        const rental = rentals[index];
+        document.getElementById('rentalName').value = rental.rentalName;
+        document.getElementById('type').value = rental.type;
+        document.getElementById('price').value = rental.price;
+        document.getElementById('description').value = rental.description;
+        rentals.splice(index, 1);
+        displayRentals();
+        toggleFormVisibility();
+    }
+
+    // Function to delete a rental
+    function deleteRental(index) {
+        rentals.splice(index, 1);
+        displayRentals();
+    }
+
+    // Search functionality
+    document.getElementById('search').addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        const filteredRentals = rentals.filter(rental =>
+            rental.rentalName.toLowerCase().includes(query) || rental.description.toLowerCase().includes(query)
+        );
+        displayRentals(filteredRentals);
+    });
+
+    // Function to toggle form visibility
+    function toggleFormVisibility() {
+        if (rentalForm.style.display === 'none') {
+            rentalForm.style.display = 'block';
+        } else {
+            rentalForm.style.display = 'none';
+        }
+    }
+
+    // Show the form when the "Show Form" button is clicked
+    showFormBtn.addEventListener('click', toggleFormVisibility);
+
+    // Initial display
+    displayRentals();
+
+</script>
+</html>
