@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Include custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for weather icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,12 +31,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/CO-Z/Login Page/Login-bootstrap.html" id="logout">Logout</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <div class="container mt-4">
-        <h1>Admin Dashboard</h1>
+        <div class="jumbotron">
+            <h1>Welcome to the Admin Dashboard</h1>
+            <p>This is your control center for managing rentals.</p>
+            <div id="time" class="text-primary"></div>
+            <div id="weather" class="text-secondary">
+                <i class="fa fa-sun"></i> <span id="temperature"></span>&deg;C | <span id="condition"></span>
+            </div>
+        </div>
+
+        <!-- Add a Rental Form -->
+        <h2>Add a Rental</h2>
         <button id="showFormBtn" class="btn btn-primary">Show Form</button>
         <form id="rental-form" style="display: none;">
             <div class="form-group">
@@ -59,7 +74,7 @@
                 <label for="description">Description</label>
                 <textarea class="form-control" id="description" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Add Rental</button>
+            <button type="submit" class="btn btn-primary" id="addRentalBtn">Add Rental</button>
         </form>
 
         <div class="mt-4">
@@ -85,40 +100,38 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-<script>
-    const rentalForm = document.getElementById('rental-form');
-    const showFormBtn = document.getElementById('showFormBtn');
-
-    // Sample data for demonstration purposes (you would replace this with actual data)
-    let rentals = [];
-
-    // Function to display rentals in the table
-    function displayRentals(filteredRentals) {
-        const rentalList = document.getElementById('rental-list');
-        rentalList.innerHTML = '';
-
-        const rentalsToDisplay = filteredRentals || rentals;
-
-        rentalsToDisplay.forEach((rental, index) => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${rental.rentalName}</td>
-                <td>${rental.type}</td>
-                <td>${rental.price}</td>
-                <td>${rental.description}</td>
-                <td>
-                    <button class="btn btn-warning" onclick="editRental(${index})">Edit</button>
-                    <button class="btn btn-danger" onclick="deleteRental(${index})">Delete</button>
-                </td>
-            `;
-            rentalList.appendChild(row);
-        });
-    }
-
-    // Function to add a new rental
-    rentalForm.addEventListener('submit', function (event) {
+    <script>
+        const rentalForm = document.getElementById('rental-form');
+        const showFormBtn = document.getElementById('showFormBtn');
+    
+        // Sample data for demonstration purposes (you would replace this with actual data)
+        let rentals = [];
+    
+        // Function to display rentals in the table
+        function displayRentals(filteredRentals) {
+            const rentalList = document.getElementById('rental-list');
+            rentalList.innerHTML = '';
+    
+            const rentalsToDisplay = filteredRentals || rentals;
+    
+            rentalsToDisplay.forEach((rental, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${rental.rentalName}</td>
+                    <td>${rental.type}</td>
+                    <td>${rental.price}</td>
+                    <td>${rental.description}</td>
+                    <td>
+                        <button class="btn btn-warning" onclick="editRental(${index})">Edit</button>
+                        <button class="btn btn-danger" onclick="deleteRental(${index})">Delete</button>
+                    </td>
+                `;
+                rentalList.appendChild(row);
+            });
+        }
+    
+        // Function to add a new rental
+        rentalForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const rentalName = document.getElementById('rentalName').value;
         const type = document.getElementById('type').value;
@@ -126,54 +139,99 @@
         const description = document.getElementById('description').value;
 
         if (rentalName && type && price && description) {
-            rentals.push({ rentalName, type, price, description });
+            // Show a confirmation dialog before adding the rental
+            if (window.confirm('Are you sure you want to add this rental?')) {
+                rentals.push({ rentalName, type, price, description });
+                displayRentals();
+                this.reset();
+                toggleFormVisibility();
+            }
+        }
+    });
+    
+        // Function to edit a rental
+        function editRental(index) {
+            const rental = rentals[index];
+            document.getElementById('rentalName').value = rental.rentalName;
+            document.getElementById('type').value = rental.type;
+            document.getElementById('price').value = rental.price;
+            document.getElementById('description').value = rental.description;
+            rentals.splice(index, 1);
             displayRentals();
-            this.reset();
             toggleFormVisibility();
         }
-    });
-
-    // Function to edit a rental
-    function editRental(index) {
-        const rental = rentals[index];
-        document.getElementById('rentalName').value = rental.rentalName;
-        document.getElementById('type').value = rental.type;
-        document.getElementById('price').value = rental.price;
-        document.getElementById('description').value = rental.description;
-        rentals.splice(index, 1);
-        displayRentals();
-        toggleFormVisibility();
-    }
-
-    // Function to delete a rental
-    function deleteRental(index) {
-        rentals.splice(index, 1);
-        displayRentals();
-    }
-
-    // Search functionality
-    document.getElementById('search').addEventListener('input', function () {
-        const query = this.value.toLowerCase();
-        const filteredRentals = rentals.filter(rental =>
-            rental.rentalName.toLowerCase().includes(query) || rental.description.toLowerCase().includes(query)
-        );
-        displayRentals(filteredRentals);
-    });
-
-    // Function to toggle form visibility
-    function toggleFormVisibility() {
-        if (rentalForm.style.display === 'none') {
-            rentalForm.style.display = 'block';
-        } else {
-            rentalForm.style.display = 'none';
+    
+        // Function to delete a rental
+        function deleteRental(index) {
+            rentals.splice(index, 1);
+            displayRentals();
         }
-    }
+    
+        // Search functionality
+        document.getElementById('search').addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            const filteredRentals = rentals.filter(rental =>
+                rental.rentalName.toLowerCase().includes(query) || rental.description.toLowerCase().includes(query)
+            );
+            displayRentals(filteredRentals);
+        });
+    
+        // Function to toggle form visibility
+        function toggleFormVisibility() {
+            if (rentalForm.style.display === 'none') {
+                rentalForm.style.display = 'block';
+            } else {
+                rentalForm.style.display = 'none';
+            }
+        }
+    
+        // Show the form when the "Show Form" button is clicked
+        showFormBtn.addEventListener('click', toggleFormVisibility);
+    
+        // Function to get current time
+        function updateTime() {
+            const timeElement = document.getElementById('time');
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            timeElement.textContent = `Current time: ${timeString}`;
+        }
+    
+        // Update time initially and every 1 second
+        updateTime();
+        setInterval(updateTime, 1000);
+    
+        // Function to get weather information (you need to replace the API URL with a real weather API)
+        function updateWeather() {
+            // Simulated weather data
+            const temperature = 30; // in Celsius
+            const condition = 'Sunny';
+    
+            const temperatureElement = document.getElementById('temperature');
+            const conditionElement = document.getElementById('condition');
+    
+            temperatureElement.textContent = temperature;
+            conditionElement.textContent = condition;
+        }
+    
+        // Update weather initially and every 30 minutes
+        updateWeather();
+        setInterval(updateWeather, 30 * 60 * 1000); // 30 minutes in milliseconds
 
-    // Show the form when the "Show Form" button is clicked
-    showFormBtn.addEventListener('click', toggleFormVisibility);
+        const logoutButton = document.getElementById('logout');
 
-    // Initial display
-    displayRentals();
+        // Add a click event listener to the logout button
+        logoutButton.addEventListener('click', function () {
+            // Perform logout actions, such as clearing user session or tokens.
+            // You should also redirect the user to the login page or a landing page after logging out.
 
-</script>
+            // For example, clear a session and redirect to the login page:
+            // Assuming you have a function to clear the session like clearSession()
+            clearSession();
+
+            // Redirect to the login page
+            window.location.href = '/CO-Z/Login Page/Login-bootstrap.html'; // Replace 'login.html' with your actual login page URL.
+        });
+
+    </script>
+</body>
 </html>
