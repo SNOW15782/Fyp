@@ -93,6 +93,8 @@
                 <tbody id="rental-list">
                 </tbody>
             </table>
+            <button type="button" class="btn btn-success" id="saveRentalBtn">Save</button>
+            <button id="downloadExcelBtn" class="btn btn-primary">Download Excel</button>
         </div>
     </div>
 
@@ -100,6 +102,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     <script>
         const rentalForm = document.getElementById('rental-form');
         const showFormBtn = document.getElementById('showFormBtn');
@@ -232,6 +235,69 @@
             window.location.href = '/CO-Z/Login Page/Login-bootstrap.html'; // Replace 'login.html' with your actual login page URL.
         });
 
-    </script>
+        // Function to save rentals to local storage
+        function saveRentalsToLocalStorage() {
+        localStorage.setItem('rentals', JSON.stringify(rentals));
+    }
+
+        // Function to load rentals from local storage
+        function loadRentalsFromLocalStorage() {
+        const storedRentals = localStorage.getItem('rentals');
+        if (storedRentals) {
+        rentals = JSON.parse(storedRentals);
+    }
+}
+
+    // Initialize by loading existing rentals from local storage
+    loadRentalsFromLocalStorage();
+
+    // Add a click event listener to the "Save" button
+    document.getElementById('saveRentalBtn').addEventListener('click', function () {
+    // Save rentals to local storage
+    saveRentalsToLocalStorage();
+    alert('Rental data has been saved!');
+});
+
+    // Function to export rentals as an Excel file
+    function exportToExcel() {
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.json_to_sheet(rentals);
+    XLSX.utils.book_append_sheet(wb, ws, 'Rentals');
+    const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+
+    // Create a Blob object to represent the data
+    const blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+    // Create a temporary URL for the Blob
+    const url = window.URL.createObjectURL(blob);
+
+    // Create a download link and trigger the download
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'rentals.xlsx';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+
+    // Clean up by revoking the Blob URL
+    window.URL.revokeObjectURL(url);
+}
+
+// Add a click event listener to the "Download Excel" button
+document.getElementById('downloadExcelBtn').addEventListener('click', exportToExcel);
+
+// Add a function to display rentals from local storage
+function displayRentalsFromLocalStorage() {
+    const storedRentals = localStorage.getItem('rentals');
+    if (storedRentals) {
+        rentals = JSON.parse(storedRentals);
+        displayRentals(); // Display the loaded rentals
+    }
+}
+
+// Call the function to display rentals when the page loads or is refreshed
+window.addEventListener('load', displayRentalsFromLocalStorage);
+
+</script>
 </body>
 </html>
