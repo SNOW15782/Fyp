@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-        <mxGraphModel dx="1726" dy="1693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+        <mxGraphModel dx="1300" dy="1404" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -11,16 +11,11 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="Ci3cu0jDoSGofdBfNgbZ-3" value="Admin" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-210" y="430" width="120" height="60" as="geometry"/>
+                <mxCell id="122" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ci3cu0jDoSGofdBfNgbZ-3" target="61">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="109" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ci3cu0jDoSGofdBfNgbZ-5" target="61">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="120" y="140"/>
-                            <mxPoint x="90" y="250"/>
-                        </Array>
-                    </mxGeometry>
+                <mxCell id="Ci3cu0jDoSGofdBfNgbZ-3" value="Rental Admin" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-210" y="430" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="Ci3cu0jDoSGofdBfNgbZ-5" value="1.0" style="swimlane;startSize=23;" parent="1" vertex="1">
                     <mxGeometry x="240" y="15" width="190" height="60" as="geometry"/>
@@ -45,22 +40,25 @@
                 </mxCell>
                 <mxCell id="94" style="edgeStyle=none;html=1;" edge="1" parent="1" source="Ci3cu0jDoSGofdBfNgbZ-41">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="920" y="465" as="targetPoint"/>
+                        <mxPoint x="920" y="659" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="104" style="edgeStyle=none;html=1;entryX=0.512;entryY=-0.113;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Ci3cu0jDoSGofdBfNgbZ-41" target="76">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="Ci3cu0jDoSGofdBfNgbZ-41" value="8.0" style="swimlane;startSize=23;" parent="1" vertex="1">
-                    <mxGeometry x="590" y="435" width="210" height="60" as="geometry">
+                    <mxGeometry x="590" y="629" width="210" height="60" as="geometry">
                         <mxRectangle x="120" y="460" width="60" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="Ci3cu0jDoSGofdBfNgbZ-42" value="Update rental" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="Ci3cu0jDoSGofdBfNgbZ-41" vertex="1">
                     <mxGeometry x="55" y="30" width="100" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="111" style="edgeStyle=none;html=1;" edge="1" parent="1" source="8" target="Ci3cu0jDoSGofdBfNgbZ-3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="8" value="3.0" style="swimlane;startSize=23;" parent="1" vertex="1">
-                    <mxGeometry x="230" y="260" width="210" height="60" as="geometry">
+                    <mxGeometry x="-60" y="250" width="210" height="60" as="geometry">
                         <mxRectangle x="240" y="260" width="60" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
@@ -96,22 +94,19 @@
                 </mxCell>
                 <mxCell id="90" style="edgeStyle=none;html=1;" edge="1" parent="1" source="61">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="580" y="465" as="targetPoint"/>
+                        <mxPoint x="580" y="659" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="61" value="7.0" style="swimlane;startSize=23;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="435" width="210" height="60" as="geometry">
+                    <mxGeometry x="240" y="629" width="210" height="60" as="geometry">
                         <mxRectangle x="120" y="460" width="60" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="62" value="Add rental" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="61" vertex="1">
                     <mxGeometry x="65" y="30" width="80" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="107" style="edgeStyle=none;html=1;entryX=0.444;entryY=1.074;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="63" target="95">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
                 <mxCell id="63" value="9.0" style="swimlane;startSize=23;" parent="1" vertex="1">
-                    <mxGeometry x="930" y="435" width="210" height="60" as="geometry">
+                    <mxGeometry x="930" y="629" width="210" height="60" as="geometry">
                         <mxRectangle x="120" y="460" width="60" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
@@ -119,7 +114,7 @@
                     <mxGeometry x="55" y="30" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="76" value="rental_data" style="shape=partialRectangle;fillColor=none;align=left;verticalAlign=middle;strokeColor=default;spacingLeft=34;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;strokeWidth=1;perimeterSpacing=1;right=0;" parent="1" vertex="1">
-                    <mxGeometry x="635" y="570" width="120" height="30" as="geometry"/>
+                    <mxGeometry x="635" y="764" width="120" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="77" value="D4" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;stokeWidth=1;dashed=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;strokeColor=default;" parent="76" connectable="0" vertex="1">
                     <mxGeometry width="30" height="30" as="geometry"/>
@@ -131,19 +126,61 @@
                     <mxGeometry x="100" y="50" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="92" value="Rental details" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="470" y="430" width="90" height="30" as="geometry"/>
+                    <mxGeometry x="470" y="624" width="90" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="93" value="Save Rental details" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="810" y="430" width="110" height="30" as="geometry"/>
+                    <mxGeometry x="810" y="624" width="110" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="95" value="User" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="1060" y="200" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="975" y="270" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="100" value="Admin&amp;nbsp; boleh download excel rental_data" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="90" y="740" width="410" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="108" value="download confirmation&amp;nbsp;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="700" y="520" width="150" height="30" as="geometry"/>
+                    <mxGeometry x="700" y="714" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" style="edgeStyle=none;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ci3cu0jDoSGofdBfNgbZ-6" target="61">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="110" y="180" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="180" y="170"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="112" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="63" target="95">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="" style="group" connectable="0" vertex="1" parent="1">
+                    <mxGeometry x="520" y="240" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="3.0" style="swimlane;startSize=23;" vertex="1" parent="113">
+                    <mxGeometry width="210" height="60" as="geometry">
+                        <mxRectangle x="240" y="260" width="60" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="115" value="Host a unit" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="114">
+                    <mxGeometry x="65" y="25" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="" style="group" connectable="0" vertex="1" parent="1">
+                    <mxGeometry x="240" y="240" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="3.0" style="swimlane;startSize=23;" vertex="1" parent="116">
+                    <mxGeometry width="210" height="60" as="geometry">
+                        <mxRectangle x="240" y="260" width="60" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="118" value="Fill details" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="117">
+                    <mxGeometry x="65" y="25" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="117" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="114" target="117">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="Host kena hantar form maybe pakai google form (suggestion)&amp;nbsp;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="310" width="410" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
