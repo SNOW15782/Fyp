@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-        <mxGraphModel dx="483" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+        <mxGraphModel dx="833" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -19,7 +19,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="208" value="Merit" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-                    <mxGeometry x="520" y="880" width="250" height="150" as="geometry"/>
+                    <mxGeometry x="490" y="880" width="250" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="209" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="208" vertex="1">
                     <mxGeometry y="30" width="250" height="30" as="geometry"/>
@@ -392,7 +392,7 @@
                         <mxPoint y="-13" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="510" style="edgeStyle=none;rounded=0;html=1;entryX=0.24;entryY=0;entryDx=0;entryDy=0;fontSize=20;startArrow=ERmandOne;startFill=0;endArrow=ERoneToMany;endFill=0;exitX=-0.002;exitY=0.287;exitDx=0;exitDy=0;entryPerimeter=0;jumpStyle=arc;jumpSize=20;exitPerimeter=0;" parent="1" source="354" target="208" edge="1">
+                <mxCell id="510" style="edgeStyle=none;rounded=0;html=1;entryX=0.36;entryY=0;entryDx=0;entryDy=0;fontSize=20;startArrow=ERmandOne;startFill=0;endArrow=ERoneToMany;endFill=0;exitX=-0.002;exitY=0.287;exitDx=0;exitDy=0;entryPerimeter=0;jumpStyle=arc;jumpSize=20;exitPerimeter=0;" parent="1" source="354" target="208" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="510" y="415"/>
@@ -480,9 +480,9 @@
                         <Array as="points">
                             <mxPoint x="1498" y="120"/>
                             <mxPoint x="990" y="120"/>
-                            <mxPoint x="480" y="120"/>
-                            <mxPoint x="480" y="260"/>
-                            <mxPoint x="480" y="955"/>
+                            <mxPoint x="450" y="120"/>
+                            <mxPoint x="450" y="270"/>
+                            <mxPoint x="450" y="955"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
