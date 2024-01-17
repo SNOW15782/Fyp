@@ -24,7 +24,7 @@
             margin-bottom: 10px;
         }
         .filter-tags {
-            margin-top: 20px;
+            margin-top: 20px;animation-fill-mode: ;
         }
         .filter-tags .badge {
             cursor: pointer;
@@ -42,34 +42,110 @@
             background-color: #7e6fd1;
             border-color: #7e6fd1;
         }
+        
+        #searchButton {
+        background-color: #7e6fd1; /* Purple color */
+        border-color: #7e6fd1;
+        color: #fff; /* Text color */
+        }
 
+        #searchButton:hover {
+        background-color: #593fad; /* Darker shade of purple on hover */
+        border-color: #593fad;
+        }
+
+        body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        }
+
+        .container {
+        flex: 1;
+        }
+
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-brand:hover,
+        .navbar-nav .nav-link:hover {
+            color: #7e6fd1;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            border-top: 1px solid #555; /* Adjust the border size and color as needed */
+        }
+        
+        .hidden {
+        display: none;
+        }
         
     </style>
 </head>
 <body>
 
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">CO-Z</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
 <div class="container">
-    <h1 class="my-4">Product Page</h1>
+    <h1 class="my-4">Find Your Next Living</h1>
 
     <div class="row">
         <div class="col-md-12">
             <!-- Search Bar -->
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search for products..." aria-label="Search for products" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" id="searchInput" placeholder="Search for products..." aria-label="Search for products" aria-describedby="searchButton">
                 <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">Search</button>
+                    <button class="btn btn-primary" type="button" id="searchButton">Search</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Filter Tags -->
+    <!-- Filter Tags 
     <div class="filter-tags">
-        <span>Filter by:</span>
-        <span class="badge badge-primary">Studio</span>
-        <span class="badge badge-primary">Duplex</span>
-        <span class="badge badge-primary">Aprtments</span>
-    </div>
+        <span class="badge badge-primary filter" data-category="Studio">Studio</span>
+        <span class="badge badge-primary filter" data-category="Duplex">Duplex</span>
+        <span class="badge badge-primary filter" data-category="Apartments">Apartments</span>
+        
+    </div>-->
 
     <div class="row">
         <div class="col-md-4">
@@ -116,7 +192,7 @@
                 <h3 class="product-title">Product 4</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p class="text-primary">$49.99</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <a href="#" class="btn btn-primary custom-purple-button btn-block">Add to Cart</a>
             </div>
         </div>
 
@@ -126,7 +202,7 @@
                 <h3 class="product-title">Product 5</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p class="text-primary">$59.99</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <a href="#" class="btn btn-primary custom-purple-button btn-block">Add to Cart</a>
             </div>
         </div>
 
@@ -136,15 +212,43 @@
                 <h3 class="product-title">Product 6</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p class="text-primary">$69.99</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <a href="#" class="btn btn-primary custom-purple-button btn-block">Add to Cart</a>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Modern Footer -->
+<div class="container-fluid footer">
+    <div class="row p-3">
+        <div class="col-md text-center">
+            <p>&copy; 2024 CO-Z. All rights reserved.</p>
+
 <!-- Add Bootstrap and jQuery scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // JavaScript for searching
+    $(document).ready(function () {
+        $('#searchButton').click(function () {
+            var searchTerm = $('#searchInput').val().toLowerCase();
+
+            $('.product-card').each(function () {
+                var title = $(this).find('.product-title').text().toLowerCase();
+
+                if (title.includes(searchTerm)) {
+                    $(this).removeClass('hidden');
+                } else {
+                    $(this).addClass('hidden');
+                }
+            });
+        });
+    });
+</script>
+
+
+
 </body>
 </html>
