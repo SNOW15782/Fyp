@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-        <mxGraphModel dx="3040" dy="1968" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+        <mxGraphModel dx="1067" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="628" value="" style="whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="20" y="10" width="1490" height="2270" as="geometry"/>
+                <mxCell id="628" value="" style="whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="164" y="10" width="1490" height="2270" as="geometry"/>
                 </mxCell>
                 <mxCell id="402" value="" style="edgeStyle=none;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;jumpStyle=arc;fillColor=#d80073;strokeColor=#A50040;" parent="1" source="Ci3cu0jDoSGofdBfNgbZ-3" target="169" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -319,7 +319,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="494" value="Merit Detail" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="493" vertex="1" connectable="0">
+                <mxCell id="494" value="Rating Detail" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="493" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="200" y="760" as="offset"/>
                     </mxGeometry>
@@ -726,7 +726,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="497" value="Merit Record" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="496" vertex="1" connectable="0">
+                <mxCell id="497" value="Rating Record" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="496" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="-80" y="447" as="offset"/>
                     </mxGeometry>
@@ -748,8 +748,8 @@
                 <mxCell id="210" value="16.0" style="swimlane;startSize=23;rounded=1;whiteSpace=wrap;strokeColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="680" y="1760" width="190" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="211" value="View Merit score" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;fontColor=#000000;" parent="210" vertex="1">
-                    <mxGeometry x="45" y="30" width="110" height="30" as="geometry"/>
+                <mxCell id="211" value="View Rating score" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;fontColor=#000000;" parent="210" vertex="1">
+                    <mxGeometry x="40" y="30" width="120" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="374" value="" style="edgeStyle=none;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;jumpStyle=arc;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" source="215" target="Ci3cu0jDoSGofdBfNgbZ-5" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -863,7 +863,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="492" value="Merit Detail" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="491" vertex="1" connectable="0">
+                <mxCell id="492" value="Rating Detail" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="491" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="200" y="463" as="offset"/>
                     </mxGeometry>
