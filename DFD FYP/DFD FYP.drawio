@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-        <mxGraphModel dx="800" dy="1550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+        <mxGraphModel dx="219" dy="1319" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1058,7 +1058,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="328" value="Wishlist" style="shape=partialRectangle;fillColor=#1ba1e2;align=left;verticalAlign=middle;strokeColor=#006EAF;spacingLeft=34;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;strokeWidth=1;perimeterSpacing=1;right=0;whiteSpace=wrap;fontColor=#ffffff;" parent="1" vertex="1">
+                <mxCell id="328" value="wishlist" style="shape=partialRectangle;fillColor=#1ba1e2;align=left;verticalAlign=middle;strokeColor=#006EAF;spacingLeft=34;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;strokeWidth=1;perimeterSpacing=1;right=0;whiteSpace=wrap;fontColor=#ffffff;" parent="1" vertex="1">
                     <mxGeometry x="1380" y="940" width="90" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="329" value="D7" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;stokeWidth=1;dashed=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;strokeColor=default;whiteSpace=wrap;" parent="328" vertex="1" connectable="0">
@@ -1084,7 +1084,7 @@
                 <mxCell id="338" value="D8" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;stokeWidth=1;dashed=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;strokeColor=default;whiteSpace=wrap;" parent="337" vertex="1" connectable="0">
                     <mxGeometry width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="559" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="1" source="350" target="555" edge="1">
+                <mxCell id="559" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fillColor=#1ba1e2;strokeColor=#006EAF;entryX=0.455;entryY=0.969;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="350" target="555" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1430" y="1910"/>
@@ -1187,7 +1187,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="641" style="edgeStyle=none;html=1;exitX=0.622;exitY=0.963;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="1" source="362" target="630" edge="1">
+                <mxCell id="641" style="edgeStyle=none;html=1;exitX=0.553;exitY=0.964;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="1" source="362" target="630" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1350" y="560" as="targetPoint"/>
                         <Array as="points">
@@ -1297,13 +1297,14 @@
                 <mxCell id="448" value="Landlord Profile edit" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;labelBackgroundColor=default;" parent="447" vertex="1">
                     <mxGeometry x="30" y="30" width="130" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="461" value="" style="edgeStyle=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.256;entryY=1.058;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="1" source="449" target="362" edge="1">
+                <mxCell id="461" value="" style="edgeStyle=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;jumpStyle=arc;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="1" source="449" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1030" y="1220"/>
                             <mxPoint x="1030" y="560"/>
                             <mxPoint x="1400" y="560"/>
                         </Array>
+                        <mxPoint x="1400" y="510" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="462" value="New Admin Record" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="461" vertex="1" connectable="0">
@@ -1382,11 +1383,11 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="555" value="User Rating" style="shape=partialRectangle;fillColor=#1ba1e2;align=left;verticalAlign=middle;strokeColor=#006EAF;spacingLeft=34;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;strokeWidth=1;perimeterSpacing=1;right=0;whiteSpace=wrap;fontColor=#ffffff;" parent="1" vertex="1">
-                    <mxGeometry x="1380" y="1620" width="100" height="30" as="geometry"/>
+                <mxCell id="555" value="User_Rating" style="shape=partialRectangle;fillColor=#1ba1e2;align=left;verticalAlign=middle;strokeColor=#006EAF;spacingLeft=34;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;strokeWidth=1;perimeterSpacing=1;right=0;whiteSpace=wrap;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1380" y="1620" width="110" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="556" value="D10" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;stokeWidth=1;dashed=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;strokeColor=default;whiteSpace=wrap;" parent="555" vertex="1" connectable="0">
-                    <mxGeometry width="33.333333333333336" height="30" as="geometry"/>
+                    <mxGeometry width="36.66666666666667" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="609" value="" style="edgeStyle=none;exitX=0.409;exitY=0.999;exitDx=0;exitDy=0;exitPerimeter=0;jumpStyle=arc;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="139" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -1423,7 +1424,7 @@
                 <mxCell id="631" value="Wishlist" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;labelBackgroundColor=default;" parent="630" vertex="1">
                     <mxGeometry x="65" y="30" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="639" value="Whishlist" style="shape=partialRectangle;fillColor=#1ba1e2;align=left;verticalAlign=middle;strokeColor=#006EAF;spacingLeft=34;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;strokeWidth=1;perimeterSpacing=1;right=0;whiteSpace=wrap;fontColor=#ffffff;" parent="1" vertex="1">
+                <mxCell id="639" value="Wishlist" style="shape=partialRectangle;fillColor=#1ba1e2;align=left;verticalAlign=middle;strokeColor=#006EAF;spacingLeft=34;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;strokeWidth=1;perimeterSpacing=1;right=0;whiteSpace=wrap;fontColor=#ffffff;" parent="1" vertex="1">
                     <mxGeometry x="1375" y="2160" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="640" value="D11" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;stokeWidth=1;dashed=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;strokeColor=default;whiteSpace=wrap;" parent="639" vertex="1" connectable="0">
